@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
+html{
+    font-size: 10px;
+}
 body{
     box-sizing: border-box;
-    font-size: 10px;
     font-family: 'Poppins', sans-serif;
 }
 .main{
@@ -14,8 +16,65 @@ body{
     place-items: center;
 }
 .container{
-    width: 35%;
+    width: 450px;
     height: auto;
-    background: #1e272e;
+    background: black;
     text-align: center;
+    padding: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 2px #333;
+}
+.container h1{
+    font-size: 2.5rem;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+.container .form-group input{
+    width: 45%;
+    background: transparent;
+    border: 2px solid #3B3B98;
+    height: 35px;
+    margin: 10px auto;
+    border-radius: 30px;
+    background: transparent;
+    padding: 0 15px;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.container .form-group input[type = "email"]:focus,
+.container .form-group input[type = "password"]:focus{
+    width: 70%;
+    transition: 0.5s;
+    border: 2px solid #05c46b;
+}
+.container input[type="submit"]{
+    padding: 10px 25px;
+    margin-top: 10px;
+    border: 2px solid #05c46b;
+    background: #05c46b;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.container input[type="submit"]:hover{
+    background: transparent;
+    border: 2px solid #01a3a4;
+    transition: .5s;
+}
+.container .form-group input::placeholder{
+    color: rgba(255, 255, 255, 0.747);
+}
+@media(max-width:768px){
+    .container{
+        width: 80%;
+    }
+}
+@media(max-width:500px){
+    .container{
+        width: 90%;
+    }
 }
